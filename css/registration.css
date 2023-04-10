@@ -1,0 +1,32 @@
+
+.form_control small{
+
+    visibility: hidden;
+}
+
+.form_control i{
+    visibility: hidden;
+}
+
+.form_control.error small{
+    color: red;
+    visibility: visible;
+}
+
+.form_control.error #error_icon {
+    color: red;
+    visibility: visible;
+    margin-left: -5px;
+}
+
+.form_control.success small{
+    color: green;
+    visibility: visible; 
+    margin-left: -20px;
+}
+
+.form_control.success #success_icon{
+    color: green;
+    visibility: visible;
+   
+}

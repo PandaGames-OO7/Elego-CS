@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="/css/registration.css">
+    <!-- JavaScript -->
+    <script src="/javascript/registration.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+  </head>
+  <body>    
+      <div class="container">
+        <div class="header">
+          <h1>Registration Form</h1>
+        </div>
+        <form class = "form" id = "form">
+          <div class = "form_control">
+            <label for="Name">Name</label>
+            <input type="text" name="" id="username" placeholder="Enter your Name">
+             <i id="success_icon" class="fa-solid fa-circle-check"></i>
+             <i  id="error_icon" class="fa-solid fa-circle-exclamation"></i>
+            <small>Error message</small>
+          </div>
+          <div class = "form_control">
+            <label for="Email">Email</label>
+            <input type="email" name="" id="email" placeholder="Enter your Email">
+            <i id="success_icon" class="fa-solid fa-circle-check"></i>
+            <i  id="error_icon" class="fa-solid fa-circle-exclamation"></i>
+            <small>Error message</small>
+          </div>
+          <div class = "form_control">
+            <label for="">Phone Number</label>
+            <input type="tel" name="" id="number" placeholder="Phone-Number" maxlength="14">
+           <i id="success_icon" class="fa-solid fa-circle-check"></i>
+           <i  id="error_icon" class="fa-solid fa-circle-exclamation"></i>
+            <small>Error message</small>
+          </div>
+          <div class = "form_control">
+            <label for="Password">Password</label>
+            <input type="password" name="" id="password" placeholder="Password">
+             <i id="success_icon" class="fa-solid fa-circle-check"></i>
+           <i  id="error_icon" class="fa-solid fa-circle-exclamation"></i>
+            <small>Error message</small>
+          </div>
+          <div class = "form_control">
+            <label for="">Confirm-Password</label>
+            <input type="password" name="" id="confirm_password" placeholder="Re-Enter password">
+            <i id="success_icon" class="fa-solid fa-circle-check"></i>
+            <i  id="error_icon" class="fa-solid fa-circle-exclamation"></i>
+            <small>Error message</small>
+          </div>
+          <input type="submit" name="" id="submit" value="submit" class = "btn">
+        </form>
+      </div>
+  </body>
+</html>

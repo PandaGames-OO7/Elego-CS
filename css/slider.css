@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#img_container {
+    position: relative;
+}
+
+.img_list {
+  display: flex;
+}
+
+.img_item {
+  min-width: 100%;
+  
+}
+.img_item img {
+  height: 100%;
+  width: 100%;
+}
+
+/* slider buttons */
+#img_btn_container{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   
+}
+
+.slider_btn{
+    border: 1px solid red;
+    background-color: transparent;
+    font-size: 40px;
+    margin: 100px 20px;
+    padding: 80px 15px; 
+    cursor: pointer;
+}
+

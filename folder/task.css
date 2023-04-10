@@ -1,0 +1,67 @@
+/* .main{
+    display: flex;
+    margin-top: 50px;
+}
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    padding: 20px;
+    height: 10%;
+    background-color: white;
+    margin: 20px;
+    border: 1px solid black;
+
+}
+
+#button{
+    margin-left: 45%;
+    margin-top: 10%;
+    padding: 30px;
+    border-radius: 20px ;
+}
+
+
+.contact_us{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+   justify-content: space-between;
+}
+
+.space{
+    padding: 10px;
+} */
+
+
+
+
+
+
+
+
+
+
+.form_control small{
+
+    visibility: hidden;
+}
+.form_control i{
+    visibility: hidden;
+}
+
+.form_control.error small{
+    color: red;
+    visibility: visible;
+}
+
+.form_control.success small{
+    color: green;
+    visibility: visible;
+}
+
+.form_control.success i{
+    color: green;
+    visibility: visible;
+}

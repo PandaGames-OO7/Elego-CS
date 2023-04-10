@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  background-color: black;
+}
+
+.header span {
+  color: white;
+  margin: 12px 12px 12px 0px;
+  padding: 0px 30px 0px 30px;
+  font-size: 15px;
+}
+
+.header .fa {
+  margin: 5px;
+  color: yellow;
+  font-size: 20px;
+}
+
+/* background-image */
+
+.hero {
+  display: flex;
+}
+
+.hero {
+  width: 100%;
+  height: 93vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(/assets/images/hero-bg.jpg);
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 15px 0px 0px 45px;
+}
+ 
+/* Navigation bar */
+
+.nav_bar {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  width: 100%;
+  height: 8vh;
+  justify-content: end;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.nav_bar li {
+  padding: 40px 15px 8px 15px;
+  list-style: none;
+  background-color: transparent;
+}
+
+.nav_bar li a {
+  text-decoration: none;
+  color: white;
+}
+.nav_bar li:hover {
+  background-color: black;
+}
+
+.nav_bar li a:hover {
+  color: tomato;
+}
+
+.banner_txt {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  margin: 262px 0px 0px 46px;
+}
+
+.banner_txt h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 550;
+}
+
+.banner_txt span {
+  color: yellow;
+  font-weight: 600;
+  font-size: 52px;
+  margin-top: -15px;
+}
+
+.banner_txt div {
+  color: white;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.flip{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-left:-200px;
+}
+
+.bt_1, .bt_2 {
+  margin: 18px 0px 0px 15px;
+  padding: 10px 48px;
+  font-size: medium;
+  border-radius: 0px;
+  border: 0px;
+}
+
+.bt_1 {
+  background-color: white;
+  color: black;
+  margin-right: 9px;
+}
+
+.bt_2 {
+  background-color: rgb(229, 229, 35);
+  color: white;
+}
+
+.bt_1:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.bt_2:hover {
+  background-color: transparent;
+  color: rgb(229, 229, 35);
+  border: 1px solid rgb(229, 229, 35);
+}
+
+/* about page....*/
+
+/* .about_page {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 200vh;
+  margin-top: 5px;
+} */
+
+/* image copied 2 times */
+
+/* .img-box{
+  display: flex;
+  overflow-y: auto;
+} */
+/* .img_box img {
+  /* height: 80%; 
+  margin: 90px 0px -218px 185px;
+/* margin-left: 15px; */
+ 
+
+.about_page {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 169vh;
+  margin-top: 5px;
+}
+
+.img_box{
+  float: left;
+  width: 50%;
+  margin-left: 100px;
+  margin-top: 70px;
+  /* margin: 90px 0px -218px 185px; */
+    /* margin: 100px 0px -200px 185px;  */
+}
+ 
+.img_box img {
+  height: 50vh; 
+  width: 100%;
+ /* margin: 230px 0px -200px 185px; */
+} 
+.about_txt {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  /* right: 100px; */
+  float: right;
+
+  width: 42%;
+  height: 10vh;
+  float: right;
+  
+   background-color: rgb(255, 255, 255);
+   color: black;
+   height: 40vh;
+   margin: 30px 50px 20px -45px;
+   border: 1px solid rgb(241, 238, 238);
+ }
+
+
+
+/* <!-- dddddddddd--> */
+/* .about_txt {
+ float: right;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  height: 40vh;
+  margin: 129px 185px 0px -45px;
+  border: 1px solid rgb(241, 238, 238);
+} */
+
+.about_txt h2 {
+  padding-left: 25px;
+  padding-top: 35px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.about_txt div {
+  display: flex;
+  width: 0.1%;
+  margin-left: 25px;
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: rgb(244, 232, 12);
+  padding: 5px 0px 0px 38px;
+}
+.about_txt p {
+  padding-left: 30px;
+  padding-top: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.bt_3 {
+  margin-top: 16px;
+  margin-left: 35px;
+  background-color: rgb(230, 230, 40);
+  color: white;
+  padding: 10px 30px 10px 30px;
+  border: 0px;
+  font-size: medium;
+}
+
+.bt_3:hover {
+  background-color: transparent;
+  color: rgb(230, 230, 40);
+  border: 1px solid rgb(229, 229, 35);
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  margin: 15px 0px;
+  padding: 150px 160px;
+}
+
+/* .head{
+    color: white;
+    background-color: red;
+    margin-top: 50px;
+} */
+
+.first, .second, .third {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 15px 15px 15px 15px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+}
+
+span.heading {
+  margin-top: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+
+div.txt {
+  padding: 15px 0px;
+  font-size: medium;
+}
+
+#Capa_1 {
+  width: 20%;
+  height: 10vh;
+}
+
+/* client_page... */
+
+.client_page {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.top {
+  display: grid;
+  background-color: transparent;
+  color: black;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  margin: 50px 0px;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.bottom {
+  display: grid;
+  background-color: white;
+  color: black;
+  grid-row: 2/4;
+  grid-column: 2/3;
+  justify-items: center;
+  align-items: center; 
+  margin: 0px -200px; 
+  z-index: 1;
+}
+
+.bottom img{
+    height: 130px;
+}
+
+.paragraph h2{
+    text-align: center;
+    margin-top: -40px;
+    font-size: 20px;
+}
+
+.paragraph p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.left {
+  display: grid;
+  background-color: white;
+  grid-row: 2/4;
+  grid-column: 1/2;
+  margin: 0px 100px 0px 0px;
+  justify-items: center;
+  align-items: center;
+}
+
+.right {
+  display: grid;
+  background-color: white;
+  grid-row: 2/4;
+  grid-column: 3/4;
+  justify-items: center;
+  align-items: center;
+  margin: 0px 0px 0px 100px;
+}
+
+.left button, .right button{ 
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    border: transparent;
+}
+ 
+.fa{
+    padding: 20px;
+    font-size: 30px;
+} 
+
+.left button :hover {
+    background-color: white;
+    color: tomato;
+}
+
+.right button :hover{
+    background-color: white;
+    color: tomato;
+}
+
+
+
+/* contact_us page .......*/
+
+.contact_us{
+    display: grid;
+    background-image:linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.35)), url(/assets/images/contact-bg.jpg);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    background-color: transparent;
+    justify-items: center;
+    align-items: center;
+    row-gap: 15px;
+}
+ 
+
+.contact_us .header{
+  text-align: center;
+  color: white;
+  background-color: transparent;
+}
+
+/* .name input, .email input, .phone_number input{
+  /* border-color: transparent;  */
+
+.message input{
+  border-color:transparent;
+}
+
+.btn_send button{
+  background-color: rgb(229, 229, 35);
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+}

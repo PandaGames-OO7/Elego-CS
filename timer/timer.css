@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    border: 1px solid black;
+    font-size: 50px;
+}
