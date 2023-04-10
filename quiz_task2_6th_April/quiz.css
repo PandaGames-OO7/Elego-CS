@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    
+    background-color: rgb(244, 250, 250);
+    height: 100vh;
+    width: 100%;    
+}
+
+#box{
+    border: 2px solid grey;
+    border-radius: 30px;
+    height: 350px;
+    width: 450px;
+    padding: 20px 20px;
+    }
+
+#timer{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+#box ul{
+    padding-top:30px ;
+    font-size:20px ;
+    list-style: none;
+}
+
+#box button{
+    padding: 10px;
+    margin: 100px 165px;
+    cursor: pointer;
+}
+#result{
+    height: 90vh;
+}

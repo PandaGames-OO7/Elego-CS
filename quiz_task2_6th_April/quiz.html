@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMania</title>
+    <link rel="stylesheet" href="/quiz_task2_6th_April/quiz.css">
+    <script src="/quiz_task2_6th_April/quiz.js"defer></script>
+</head>
+<body>
+<div class="main">
+    <div id="box">
+        <p id="timer"></p>
+        <h2 id="question">question comes here</h2>
+        <ul>
+            <li>
+                <input type="radio" name="answer" id="ans1" class="answer" >
+                <label for="ans1" id="option1">A</label>
+            </li>
+            <li>
+                <input type="radio" name="answer" id="ans2" class="answer" >
+                <label for="ans2" id="option2">B</label>
+            </li>
+            <li>
+                <input type="radio" name="answer" id="ans3" class="answer" >
+                <label for="ans3" id="option3">C</label>
+            </li> 
+            <li>
+                <input type="radio" name="answer" id="ans4" class="answer" >
+                <label for="ans4" id="option4">D</label>
+            </li>
+            <li> 
+                <textarea autofocus name="ans5" id="ans5" cols="48.9" rows="10" class="answer" placeholder="max 250 characters" maxlength="250"></textarea>
+                <span id="count"></span>
+            </li>
+            <li>
+                <input type="checkbox" name="answer" id="ans6" class="answer">
+                <label for="ans6" id="option6">A</label>
+            </li>
+            <li>
+                <input type="checkbox" name="answer" id="ans7" class="answer">
+                <label for="ans7" id="option7">A</label>
+            </li>
+            <li>
+                <input type="checkbox" name="answer" id="ans8" class="answer">
+                <label for="ans8" id="option8">A</label>
+            </li>
+            <li>
+                <input type="checkbox" name="answer" id="ans9" class="answer">
+                <label for="ans9" id="option9">A</label>
+            </li>
+        <button id="submit" class="score_btn">submit</button>
+        <div id="score"></div>
+        <div id="userAnswer"></div>
+        <div id="answer"></div>
+    </div>
+    <div id="result"></div>
+    
+</div>
+</body>
+</html>
