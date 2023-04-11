@@ -110,6 +110,7 @@ let maxLength = textArea.getAttribute('maxlength');
 let resetTextArea = textArea.getAttribute('placeholder');
 let count = document.querySelector('#count');
 let result = document.querySelector('#result');
+
 let questionCount = 0;
 let score = 0;
 let StartingTime = 0;
@@ -164,26 +165,26 @@ let time = StartingTime;
 // }
 
 //timer
-let countDown = () => {
-    let minutes = 0;
-    let seconds = time;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    timer.innerHTML = `Time left ${minutes} : ${seconds}`;
-    time--;
+// let countDown = () => {
+//     let minutes = 0;
+//     let seconds = time;
+//     minutes = minutes < 10 ? '0' + minutes : minutes;
+//     seconds = seconds < 10 ? '0' + seconds : seconds;
+//     timer.innerHTML = `Time left ${minutes} : ${seconds}`;
+//     time--;
 
-    if (time < 0) {
-        clearInterval(time);
-        time = StartingTime;
-        displayOnClick();
-        ShowQuestion();
-        deselect();
-    }
-    else if (questionCount >= ques.length) {
-        timer.innerHTML = `Time left 00:00`;
-    }
-}
-setInterval(countDown, 1000);
+//     if (time < 0) {
+//         clearInterval(time);
+//         time = StartingTime;
+//         displayOnClick();
+//         showQuestion();
+//         deselect();
+//     }
+//     else if (questionCount >= ques.length) {
+//         timer.innerHTML = `Time left 00:00`;
+//     }
+// }
+// setInterval(countDown, 1000);
 
 // different time limit to each question using random method
 let timeLimit = () => {
@@ -228,8 +229,21 @@ hideRadio = () => {
     ans3.hidden = true;
     ans4.hidden = true;
 }
+
+// shows radiobuttons
+showRadio = () => {
+    option1.hidden = false;
+    option2.hidden = false;
+    option3.hidden = false;
+    option4.hidden = false;
+    ans1.hidden = false;
+    ans2.hidden = false;
+    ans3.hidden = false;
+    ans4.hidden = false;
+
+}
 //shows next questions
-const ShowQuestion = () => {
+const showQuestion = () => {
     timeLimit();
     hideCheckBox();
     textArea.hidden = true;
@@ -244,11 +258,14 @@ const ShowQuestion = () => {
     option8.innerText = questionList.c;
     option9.innerText = questionList.d;
     // textArea.innerText = questionList.e;
-
     if (questionCount >= 6 && questionCount <= 10) {
         showCheckBox();
         hideRadio();
         count.hidden = true;// hides counter
+    }
+    else if (questionCount >= 0 && questionCount < 3) {
+        count.hidden = true;
+        showRadio();
     }
     else if (questionCount >= 3 && questionCount <= 5) {
         textArea.hidden = false;
@@ -262,7 +279,7 @@ const ShowQuestion = () => {
         count.innerHTML = maxLength;
     }
 }
-ShowQuestion();
+showQuestion();
 
 //checks the selected input type by the user
 const checkAnswer = () => {
@@ -275,75 +292,152 @@ const checkAnswer = () => {
     return ans;
 };
 
-//gets the user clicked answer against input type
-getAnswerOfTheQues = () => {
-    let clickedAnswer;
-    answer = checkAnswer();
-    if (answer == 'ans1' || answer == 'ans6') {
-        clickedAnswer = ques[questionCount].a;
-    }
-    else if (answer == 'ans2' || answer == 'ans7') {
-        clickedAnswer = ques[questionCount].b;
-    }
-    else if (answer == 'ans3' || answer == 'ans8') {
-        clickedAnswer = ques[questionCount].c;
-    }
-    else if (answer == 'ans4' || answer == 'ans9') {
-        clickedAnswer = ques[questionCount].d;
-    }
-    else if (questionCount >= 3 && questionCount <= 5) {
-        getUserInpFromTextarea();
-    }
-    else {
-        clickedAnswer = "oops! You haven't clicked any option"
-    }
 
-    return clickedAnswer;
 
-}
-// Deselects the answer
-const deselect = () => {
-    answers.forEach((currentAnswer) => {
-        currentAnswer.checked = false;
-    })
-};
+// let retainPrevAns = [];
 
-// gets user input from text area question
-getUserInpFromTextarea = () => {
-    userAnswers.push(textArea.value.trim());
-    let filt = userAnswers.filter(x => x);
-    userAnswers = filt;
-}
 
-// click event on submit button
+// let retainPrevState = () =>{
+//     checkAnswer();
+//     console.log('yoyoyo'+ checkAnswer());
+//     let hy = checkAnswer();
+//     console.log('hy' + hy);
+//     retainPrevAns.push(hy); 
+// };
 
-submit.addEventListener('click', displayOnClick);
-function displayOnClick() {
-    checkedAnswer = getAnswerOfTheQues();
-    userAnswers.push(checkedAnswer); //pushing user checked answer to an array
-    console.log(userAnswers); //showing an array to console
-    if (checkedAnswer == ques[questionCount].answer) {
-        score++;
+//  const getCheckedState = () => {
+// //    prevState = checkAnswer();
+   
+//     if (answer == 'ans1') {
+//         ans1.setAttribute('checked', true);
+//         return ans1;
+//     }
+//     if (answer == 'ans2') {
+//         ans1.setAttribute('checked', true);
+//         return ans2;
+//     }
+//     if (answer == 'ans3') {
+//         ans1.setAttribute('checked', true);
+//         return ans3;
+//     }
+//     if (answer == 'ans4') {
+//         ans1.setAttribute('checked', true);
+//         return ans4;
+//     }
+//     if (answer == 'ans6') {
+//         ans1.setAttribute('checked', true);
+//         return ans1;
+//     }
+//     if (answer == 'ans7') {
+//         ans1.setAttribute('checked', true);
+//         return ans2;
+//     }
+//     if (answer == 'ans8') {
+//         ans1.setAttribute('checked', true);
+//         return ans3;
+//     }
+//     if (answer == 'ans9') {
+//         ans1.setAttribute('checked', true);
+//         return ans4;
+//     }
+
+// }
+    // getCheckedState();
+    //gets the user clicked answer against input type
+    getAnswerOfTheQues = () => {
+        let clickedAnswer;
+        answer = checkAnswer();
+        if (answer == 'ans1' || answer == 'ans6') {
+            clickedAnswer = ques[questionCount].a;
+        }
+        else if (answer == 'ans2' || answer == 'ans7') {
+            clickedAnswer = ques[questionCount].b;
+        }
+        else if (answer == 'ans3' || answer == 'ans8') {
+            clickedAnswer = ques[questionCount].c;
+        }
+        else if (answer == 'ans4' || answer == 'ans9') {
+            clickedAnswer = ques[questionCount].d;
+        }
+        else if (questionCount >= 3 && questionCount <= 5) {
+            getUserInpFromTextarea();
+        }
+        else {
+            clickedAnswer = "oops! You haven't clicked any option"
+        }
+
+        return clickedAnswer;
+    }
+   
+
+    // Deselects the answer
+    const deselect = () => {
+        answers.forEach((currentAnswer) => {
+            currentAnswer.checked = false;
+        })
     };
-    questionCount++;
-    deselect();
-    if (questionCount < ques.length) {
-        ShowQuestion();
-    }
-    else {
-        displayResult();
-    }
-};
 
-//Generate the results
-displayResult = () => {
-    let filt = userAnswers.filter(x => x);
-    userAnswers = filt;
-    document.querySelector('#box').hidden = true;
-    let output = '';
-    output += `<button class = 'btn' onclick = 'location.reload()'>Play Again</button><br><h3> You scored:-  ${score}/${ques.length}<br><br>`;
-    for (let i = 0; i < ques.length; i++) {
-        output += `${ques[i].question} <br> a)${ques[i].a} <br> b)${ques[i].b} <br> c)${ques[i].c}<br> d)${ques[i].d}<br>Answer:- ${ques[i].answer}<br>Your answer:-${userAnswers[i]}<br><br>`
-        result.innerHTML = output;
+    // gets user input from text area question
+    getUserInpFromTextarea = () => {
+        userAnswers.push(textArea.value.trim());
+        let filt = userAnswers.filter(x => x);
+        userAnswers = filt;
     }
-}
+
+    //skips the question
+    skip.addEventListener('click', () => {
+        if(questionCount >= 0 && questionCount < (ques.length-1)){
+        questionCount++;
+        showQuestion();
+        }
+    }
+        
+    );
+
+    //get the previous question
+    // prev.addEventListener('click', () => {
+    //     getCheckedState();
+    //     if (questionCount > 0) {
+    //         // retainPrevState();
+    //         // console.log('arr'+ retainPrevAns)
+    //         questionCount--;
+    //         showQuestion();
+            
+    //     }
+    //     else {
+    //         questionCount = 0;
+    //     }
+    // });
+
+    // click event on submit button
+
+    submit.addEventListener('click', displayOnClick);
+    function displayOnClick() {
+        checkedAnswer = getAnswerOfTheQues();
+        userAnswers.push(checkedAnswer); //pushing user checked answer to an array
+        console.log(userAnswers); //showing an array to console
+        if (checkedAnswer == ques[questionCount].answer) {
+            score++;
+        };
+        questionCount++;
+        deselect();
+        if (questionCount < ques.length) {
+            showQuestion();
+        }
+        else {
+            displayResult();
+        }
+    };
+
+    //Generate the results
+    displayResult = () => {
+        let filt = userAnswers.filter(x => x);
+        userAnswers = filt;
+        document.querySelector('#box').hidden = true;
+        let output = '';
+        output += `<button class = 'btn' onclick = 'location.reload()'>Play Again</button><br><h3> You scored:-  ${score}/${ques.length}<br><br>`;
+        for (let i = 0; i < ques.length; i++) {
+            output += `${ques[i].question} <br> a)${ques[i].a} <br> b)${ques[i].b} <br> c)${ques[i].c}<br> d)${ques[i].d}<br>Answer:- ${ques[i].answer}<br>Your answer:-${userAnswers[i]}<br><br>`
+            result.innerHTML = output;
+        }
+    }

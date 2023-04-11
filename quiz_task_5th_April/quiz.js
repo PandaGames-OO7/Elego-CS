@@ -274,7 +274,6 @@ const checkAnswer = () => {
     });
     return ans;
 };
-
 //gets the user clicked answer against input type
 getAnswerOfTheQues = () => {
     let clickedAnswer;

@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizMania</title>
     <link rel="stylesheet" href="/quiz_task2_10th_April/quiz.css">
-    <script src="/quiz_task2_10th_April/quiz.js"defer></script>
+    <script src="/quiz_task2_10th_April/quiz.js" defer></script>
 </head>
 <body>
 <div class="main">
+    
     <div id="box">
-        <p id="timer"></p>
+        <span class="skip_btn-align">
+            <button id="skip">skip</button>
+        </span>
         <h2 id="question">question comes here</h2>
         <ul>
+            
             <li>
-                <input type="radio" name="answer" id="ans1" class="answer" >
+                <input type="radio" name="answer" id="ans1" class="answer">
                 <label for="ans1" id="option1">A</label>
             </li>
             <li>
@@ -31,7 +35,7 @@
                 <label for="ans4" id="option4">D</label>
             </li>
             <li> 
-                <textarea autofocus name="ans5" id="ans5" cols="48.9" rows="10" class="answer" placeholder="max 250 characters" maxlength="250"></textarea>
+                <textarea autofocus name="ans5" id="ans5" cols="48.9" rows="7" class="answer" placeholder="max 250 characters" maxlength="250"></textarea>
                 <span id="count"></span>
             </li>
             <li>
@@ -50,10 +54,16 @@
                 <input type="checkbox" name="answer" id="ans9" class="answer">
                 <label for="ans9" id="option9">A</label>
             </li>
-        <button id="submit" class="score_btn">submit</button>
+        </ul>
+        <div class="all_btn">
+            <button id="prev">prev</button>
+            <button id="submit">next</button>
+        </div>
+        
         <div id="score"></div>
         <div id="userAnswer"></div>
         <div id="answer"></div>
+        <div id="prevState"></div>
     </div>
     <div id="result"></div>
     
