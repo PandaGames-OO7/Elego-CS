@@ -292,21 +292,9 @@ const checkAnswer = () => {
     return ans;
 };
 
-
-
-// let retainPrevAns = [];
-
-
-// let retainPrevState = () =>{
-//     checkAnswer();
-//     console.log('yoyoyo'+ checkAnswer());
-//     let hy = checkAnswer();
-//     console.log('hy' + hy);
-//     retainPrevAns.push(hy); 
-// };
-
+console.log(checkAnswer());
 //  const getCheckedState = () => {
-// //    prevState = checkAnswer();
+// //    answer  = checkAnswer();
    
 //     if (answer == 'ans1') {
 //         ans1.setAttribute('checked', true);
@@ -346,7 +334,7 @@ const checkAnswer = () => {
     //gets the user clicked answer against input type
     getAnswerOfTheQues = () => {
         let clickedAnswer;
-        answer = checkAnswer();
+        // answer = checkAnswer();
         if (answer == 'ans1' || answer == 'ans6') {
             clickedAnswer = ques[questionCount].a;
         }
@@ -390,24 +378,19 @@ const checkAnswer = () => {
         questionCount++;
         showQuestion();
         }
-    }
-        
-    );
+    });
 
     //get the previous question
-    // prev.addEventListener('click', () => {
-    //     getCheckedState();
-    //     if (questionCount > 0) {
-    //         // retainPrevState();
-    //         // console.log('arr'+ retainPrevAns)
-    //         questionCount--;
-    //         showQuestion();
-            
-    //     }
-    //     else {
-    //         questionCount = 0;
-    //     }
-    // });
+    prev.addEventListener('click', () => {
+        // getCheckedState();
+        if (questionCount > 0) {
+            questionCount--;
+            showQuestion();
+        }
+        else {
+            questionCount = 0;
+        }
+    });
 
     // click event on submit button
 
