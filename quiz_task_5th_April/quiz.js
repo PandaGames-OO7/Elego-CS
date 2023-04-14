@@ -1,3 +1,4 @@
+'strict mode';
 //storing questions in array of objects...
 const ques = [
     {
@@ -83,7 +84,6 @@ const ques = [
 ];
 
 //getting the needed references...
-let answer = document.querySelector('#answer').innerHTML;
 const question = document.querySelector('#question');
 const option1 = document.querySelector('#option1');
 const option2 = document.querySelector('#option2');
@@ -97,6 +97,7 @@ let ans1 = document.querySelector('#ans1');
 let ans2 = document.querySelector('#ans2');
 let ans3 = document.querySelector('#ans3');
 let ans4 = document.querySelector('#ans4');
+let answer = document.querySelector('#answer').innerHTML;
 const textArea = document.querySelector('#ans5');
 const submit = document.querySelector('#submit');
 const answers = document.querySelectorAll('.answer');
@@ -188,7 +189,17 @@ setInterval(countDown, 1000);
 // different time limit to each question using random method
 let timeLimit = () => {
     for (let i = questionCount; i < ques.length; i++) {
+        if(questionCount >= 3 && questionCount <= 5){
+            StartingTime = 25;
+            time = StartingTime;
+        }
+        else{
         StartingTime = Math.floor(Math.random() * 30 + 1);
+        if(StartingTime <= 6){
+            StartingTime = 12;
+            time = StartingTime;
+        }
+        }
         time = StartingTime;
     }
 }
@@ -292,12 +303,12 @@ getAnswerOfTheQues = () => {
         clickedAnswer = ques[questionCount].d;
     }
     else if (questionCount >= 3 && questionCount <= 5) {
+        // checkTextAreaAns();
         getUserInpFromTextarea();
     }
     else {
         clickedAnswer = "oops! You haven't clicked any option"
     }
-
     return clickedAnswer;
 
 }
@@ -308,11 +319,19 @@ const deselect = () => {
     })
 };
 
+//checks the user input from textArea with option in array of objects
+// const checkTextAreaAns = () =>{
+//     if(textArea.value.trim() == (ques[questionCount].answer)){
+//         score++;
+//     }
+// }
+
+
+
 // gets user input from text area question
 getUserInpFromTextarea = () => {
     userAnswers.push(textArea.value.trim());
-    let filt = userAnswers.filter(x => x);
-    userAnswers = filt;
+    userAnswers.filter(x => x);
 }
 
 // click event on submit button
