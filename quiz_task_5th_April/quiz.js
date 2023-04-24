@@ -366,3 +366,10 @@ displayResult = () => {
         result.innerHTML = output;
     }
 }
+
+
+console.log('hello');
+
+const ul = document.querySelector('ul');
+ul.querySelector('li');
+console.log(ul)
